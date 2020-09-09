@@ -13,18 +13,125 @@
 }
 
 body {
-  min-height: 90vh;
-  border-radius: 0.7rem;
+  font-size: 13px;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-grayish-blue);
 }
 
 .card {
-  width: 90%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+.card-img {
+  object-fit: cover;
+  flex-basis: 400px;
+  min-height: 0;
+  min-width: 0;
+  margin: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+@media (min-width: 600px) {
+  .card-img {
+    width: 50%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+  }
+}
+
+.card-content {
+  /* border: 1px solid black; */
+  width: 85%;
+  margin: 1.7em auto;
+}
+
+@media (min-width: 600px) {
+  .card-content {
+    margin: 0;
+    padding: 2rem;
+  }
 }
 
 .card-title {
-  font-size: 1.9rem;
+  font-size: 1.1rem;
+  color: var(--very-dark-grayish-blue);
+}
+
+@media (min-width: 600px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
 }
 
 .card-body {
-  font-size: 1.3rem;
+  font-size: 0.89rem;
+  color: var(--desaturated-dark-blue);
+  margin-top: 1.1em;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+@media (min-width: 600px) {
+  .card-footer {
+    margin-top: 5em;
+  }
+}
+
+.card-author {
+  display: flex;
+}
+
+.author-image {
+  object-fit: cover;
+  width: 14%;
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+.author-name {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: var(--very-dark-grayish-blue);
+}
+
+.author-date {
+  margin-top: 0.4rem;
+  color: var(--grayish-blue);
+}
+
+.share-btn .fas {
+  margin-top: 0.7rem;
+  color: var(--very-dark-grayish-blue);
+  background: var(--light-grayish-blue);
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.5rem;
 }
